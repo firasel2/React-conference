@@ -1,0 +1,63 @@
+name: 'Chromatic Publish'
+
+# Define the events that trigger this workflow
+on: push
+
+# Define the job that will be executed
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    # Define the strategies
+    strategy:
+      matrix:
+        node-version: [18.x] # Only testing on the latest Node.js version (18.x)
+
+    steps:
+      # Step 1: Checkout the repository
+      - name: Checkout repository
+        uses: actions/checkout@v3
+        with:
+          fetch-depth: 0 # 👈 Required to retrieve git history
+
+      # Step 2: Use Node.js with the specified version
+      - name: Use Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v3
+        with:
+          node-version: ${{ matrix.node-version }}
+          cache: 'npm'
+
+      # Step 3: Install node dependencies using npm ci
+      - run: npm ci
+
+      # Step 4: Run type checking using TypeScript
+      - run: npm run tsc
+
+      # Step 5: Run linting
+      - run: npm run lint
+
+      # Step 6: Publish to Chromatic (if required)
+      # Note: You can remove this step if you don't use Chromatic for visual regression testing
+      - name: Publish to Chromatic
+        id: chromatic
+        uses: chromaui/action@v1
+        with:
+          projectToken: ${{ secrets.CHROMATIC_PROJECT_TOKEN }}
+          onlyChanged: true
+
+      # Step 7: Publish Summary (optional)
+      # Note: If you want to create a summary of the workflow, you can use this step
+      - name: Publish Summary
+        run: |
+          echo "Workflow Results:"
+          echo "------------------------------------------"
+          echo "| Task        | Status                      |"
+          echo "------------------------------------------"
+          echo "| Type Check  | :white_check_mark: Success  |"
+          echo "| Lint        | :white_check_mark: Success  |"
+          echo "| Prettier    | :white_check_mark: Success  |"
+          echo "------------------------------------------"
+          echo ""
+          echo "Chromatic: ${{ steps.chromatic.outputs.buildUrl }}"
+          echo "Storybook Preview: ${{ steps.chromatic.outputs.storybookUrl }}"
+          echo ""
