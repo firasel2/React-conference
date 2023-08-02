@@ -1,7 +1,11 @@
 name: 'Chromatic Publish'
 
 # Define the events that trigger this workflow
-on: push
+on:
+  pull_request:
+      types:
+        - opened
+        - synchronize
 
 # Define the job that will be executed
 jobs:
