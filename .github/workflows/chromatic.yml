@@ -3,9 +3,9 @@ name: 'Chromatic Publish'
 # Define the events that trigger this workflow
 on:
   pull_request:
-      types:
-        - opened
-        - synchronize
+    types:
+      - opened
+      - synchronize
 
 # Define the job that will be executed
 jobs:
@@ -39,6 +39,9 @@ jobs:
 
       # Step 5: Run linting
       - run: npm run lint
+
+      # Step 5: Run prettier
+      - run: npm run prettier
 
       # Step 6: Publish to Chromatic (if required)
       # Note: You can remove this step if you don't use Chromatic for visual regression testing
