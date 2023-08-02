@@ -10,7 +10,9 @@
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build",
     "chromatic": "npx chromatic --project-token=CHROMATIC_PROJECT_TOKEN",
-    "tsc": "npx tsc"
+    "tsc": "npx tsc",
+    "prettier": "prettier --check --ignore-path .gitignore .",
+    "prettier:fix": "prettier --write --ignore-path .gitignore ."
   },
   "dependencies": {
     "@types/node": "20.4.2",
@@ -36,7 +38,10 @@
     "@storybook/react": "^7.1.0",
     "@storybook/testing-library": "^0.2.0",
     "chromatic": "^6.19.9",
+    "eslint-config-prettier": "^8.9.0",
     "eslint-plugin-storybook": "^0.6.13",
+    "husky": "^8.0.3",
+    "prettier": "^3.0.0",
     "storybook": "^7.1.0"
   },
   "readme": "ERROR: No README data found!",
