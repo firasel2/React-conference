@@ -1,4 +1,6 @@
 import type { StorybookConfig } from '@storybook/nextjs';
+const path = require('path');
+
 const config: StorybookConfig = {
   stories: ['../src/**/*.mdx', '../src/**/*.stories.@(js|jsx|mjs|ts|tsx)'],
   addons: [
@@ -9,7 +11,9 @@ const config: StorybookConfig = {
   ],
   framework: {
     name: '@storybook/nextjs',
-    options: {},
+    options: {
+      nextConfigPath: path.resolve(__dirname, '../next.config.js'),
+    },
   },
   docs: {
     autodocs: false,
