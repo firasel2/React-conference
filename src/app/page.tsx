@@ -1,6 +1,14 @@
+'use client';
+
+import { CONFERENCES_QUERY } from '@/backend/queries/conferences';
+import { useQuery } from '@apollo/experimental-nextjs-app-support/ssr';
 import Image from 'next/image';
 
 export default function Home() {
+  const { loading, data, error } = useQuery(CONFERENCES_QUERY);
+
+  console.log(loading, error, data);
+
   return (
     <main className="flex min-h-screen flex-col items-center justify-between p-24">
       <div className="z-10 w-full max-w-5xl items-center justify-between font-mono text-sm lg:flex">
