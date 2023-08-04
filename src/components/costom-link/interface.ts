@@ -8,7 +8,7 @@ interface ILink {
 }
 
 interface IComponentLink extends ILink {
-  children: ReactNode;
+  children: JSX.Element;
 }
 
 export interface ILabelLink extends ILink {
