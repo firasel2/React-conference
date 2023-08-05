@@ -57,7 +57,7 @@ module.exports = {
       ],
     },
     colors: {
-      primary: '#FFC93E',
+      primary: { DEFAULT: '#FFC93E', thin: '#FFFCF6' },
       secondary: '#111D5E',
       black: '#0A142F',
       gray: {
@@ -65,7 +65,11 @@ module.exports = {
         light: '#CDCDCD',
         thin: '#F9FAFB',
       },
+      white: '#FFFFFF',
       accent: '#2563EB',
+    },
+    boxShadow: {
+      1: '0px 10px 20px 0px rgba(161, 161, 161, 0.25)',
     },
   },
   plugins: [],
