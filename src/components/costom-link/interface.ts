@@ -1,5 +1,3 @@
-import { ReactNode } from 'react';
-
 interface ILink {
   href: string;
   isOpenNewTab: boolean;
@@ -7,7 +5,7 @@ interface ILink {
   className?: string;
 }
 
-interface IComponentLink extends ILink {
+export interface IComponentLink extends ILink {
   children: JSX.Element;
 }
 
