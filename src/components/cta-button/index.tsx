@@ -1,7 +1,7 @@
 import { twMerge } from 'tailwind-merge';
-import CustomLink from '../costom-link';
 import { ICtaButton } from './interface';
-import IconStore from '../icons';
+import IconStore from '@components/icons';
+import CustomLink from '@components/costom-link';
 
 const CtaButton = ({
   href,

@@ -15,8 +15,18 @@ const config: StorybookConfig = {
       nextConfigPath: path.resolve(__dirname, '../next.config.js'),
     },
   },
+  webpackFinal: async (config, { configType }) => {
+    if (config && config.resolve)
+      config.resolve.alias = {
+        ...config.resolve.alias,
+        '@components': path.resolve(__dirname, '../src/components'),
+        '@src': path.resolve(__dirname, '../src'),
+      };
+    return config;
+  },
   docs: {
     autodocs: false,
   },
 };
+
 export default config;
