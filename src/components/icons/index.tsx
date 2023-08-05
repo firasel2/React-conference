@@ -2,6 +2,7 @@ import { IIconStore } from './interface';
 import ArrowUpRight from './sub-components/arrow-up-right';
 import Marker from './sub-components/marker';
 import Storm from './sub-components/storm';
+import TopBottomArrow from './sub-components/top-bottom-arrow';
 
 const IconStore = ({ iconName }: IIconStore) => {
   switch (iconName) {
@@ -13,6 +14,9 @@ const IconStore = ({ iconName }: IIconStore) => {
     }
     case 'Storm': {
       return <Storm />;
+    }
+    case 'Top Bottom Arrow': {
+      return <TopBottomArrow />;
     }
     default:
       throw 'Icon not found!';
