@@ -2,7 +2,7 @@ import { INavbar } from './interface';
 
 export const navbarProps: INavbar = {
   logo: {
-    src: 'https://res.cloudinary.com/dezqxmlny/image/upload/v1691513611/React%20Conference/React_1_vl9ukb.png',
+    url: 'https://res.cloudinary.com/dezqxmlny/image/upload/v1691513611/React%20Conference/React_1_vl9ukb.png',
     alt: 'React Conference',
   },
   routes: [
