@@ -1,5 +1,6 @@
 import { Meta, StoryObj } from '@storybook/react';
 import Component from './index';
+import { timeLineStepProps } from './mock-data';
 
 const meta: Meta<typeof Component> = {
   component: Component,
@@ -15,10 +16,5 @@ const meta: Meta<typeof Component> = {
 export default meta;
 
 export const Default: StoryObj<typeof Component> = {
-  args: {
-    icon: 'Storm',
-    isHover: false,
-    lineShow: true,
-    classNames: 'h-[10rem]',
-  },
+  args: timeLineStepProps,
 };

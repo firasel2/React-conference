@@ -1,6 +1,7 @@
 import { Meta, StoryObj } from '@storybook/react';
 import Component from './index';
 import { icons } from '../icons/interface';
+import { ctaButtonProps } from './mock-data';
 
 const meta: Meta<typeof Component> = {
   component: Component,
@@ -22,9 +23,5 @@ const meta: Meta<typeof Component> = {
 export default meta;
 
 export const Default: StoryObj<typeof Component> = {
-  args: {
-    label: 'Buy Tickets',
-    href: '/',
-    icon: 'Arrow Up Right',
-  },
+  args: ctaButtonProps,
 };

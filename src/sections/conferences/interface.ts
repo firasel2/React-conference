@@ -1,8 +1,7 @@
-interface IConference {
-  id: string;
-  name: string;
+import { IConference as IConferenceCard } from '@components/card/conference/interface';
+
+interface IConference extends Omit<IConferenceCard, 'href'> {
   startDate: string;
-  slogan: string;
 }
 
 export interface IConferences {
