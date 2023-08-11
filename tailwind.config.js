@@ -4,6 +4,7 @@ module.exports = {
     './src/pages/**/*.{js,ts,jsx,tsx,mdx}',
     './src/components/**/*.{js,ts,jsx,tsx,mdx}',
     './src/app/**/*.{js,ts,jsx,tsx,mdx}',
+    './src/**/*.{js,ts,jsx,tsx,mdx}',
   ],
   theme: {
     fontSize: {
@@ -50,6 +51,18 @@ module.exports = {
         },
       ],
       '4xl': [
+        '3.75rem',
+        {
+          lineHeight: '4.5rem',
+        },
+      ],
+      '5xl': [
+        '6.75rem',
+        {
+          lineHeight: '8rem',
+        },
+      ],
+      '6xl': [
         '8.75rem',
         {
           lineHeight: '10.563rem',
@@ -81,6 +94,9 @@ module.exports = {
           lg: '4rem',
           xl: '5rem',
         },
+      },
+      animation: {
+        'spin-slow': 'spin 15s linear infinite',
       },
     },
   },
