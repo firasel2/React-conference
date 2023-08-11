@@ -19,5 +19,6 @@ export const Default: StoryObj<typeof Component> = {
     title: 'Freezing Edge 2023',
     subTitle: `The edge isn't bleeding, it's freezing!`,
     href: '/',
+    isHover: false,
   },
 };

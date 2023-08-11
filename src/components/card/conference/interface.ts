@@ -5,4 +5,5 @@ export interface IConference
   title: string;
   subTitle: string;
   classNames?: string;
+  isHover?: boolean;
 }

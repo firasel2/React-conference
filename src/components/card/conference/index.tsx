@@ -10,12 +10,14 @@ const ConferenceCard = ({
   title,
   prefetch,
   classNames,
+  isHover,
 }: IConference) => {
   return (
     <CustomLink href={href} isOpenNewTab={isOpenNewTab} prefetch={prefetch}>
       <div
         className={twMerge(
-          "w-full pt-[1.13rem] pb-[1.06rem] px-[0.38rem] bg-gray-thin relative rounded-lg overflow-hidden after:absolute after:contents:'' after:top-0 after:left-0 after:w-full after:h-[0.25rem] after:bg-gray-light",
+          "w-full pt-[1.13rem] pb-[1.06rem] px-[0.38rem] bg-gray-thin relative rounded-lg overflow-hidden after:absolute after:contents:'' after:top-0 after:left-0 after:w-full after:h-[0.25rem] after:bg-gray-light transition-all duration-300",
+          isHover && 'after:bg-primary shadow-1',
           classNames
         )}
       >
