@@ -1,6 +1,4 @@
-import Image from 'next/image';
 import { IConferences } from './interface';
-import CtaButton from '@components/cta-button';
 import { twMerge } from 'tailwind-merge';
 import ConferenceCard from '@components/card/conference';
 import TimeLineStep from '@components/time-line-step';

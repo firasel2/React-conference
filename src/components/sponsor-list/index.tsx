@@ -21,7 +21,7 @@ const SponsorList = ({ title, sponsors }: ISponsorList) => {
                 height={68}
                 sizes="(max-width: 767px) 70vw, 30vw"
                 src={sponsor.url}
-                alt={sponsor.label}
+                alt={sponsor.alt}
               />
             </div>
           ))}

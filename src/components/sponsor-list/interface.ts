@@ -1,9 +1,7 @@
 import { IconNames } from '@components/icons/interface';
+import { IImage } from '@src/common/types/interface';
 
-interface ISponsor {
-  label: string;
-  url: string;
-}
+interface ISponsor extends IImage {}
 
 export interface ISponsorList {
   title?: string;
