@@ -31,9 +31,10 @@ const Hero = ({ title, conferences }: IConferences) => {
                     {conference.startDate}
                   </span>
                   <ConferenceCard
+                    id={conference.id}
                     href={conference.id}
-                    title={conference.name}
-                    subTitle={conference.slogan}
+                    name={conference.name}
+                    slogan={conference.slogan}
                     isOpenNewTab={false}
                     isHover={conference.id === confHoverId}
                   />

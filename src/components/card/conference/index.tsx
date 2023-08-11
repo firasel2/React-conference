@@ -6,8 +6,8 @@ import IconStore from '@components/icons';
 const ConferenceCard = ({
   href,
   isOpenNewTab,
-  subTitle,
-  title,
+  slogan,
+  name,
   prefetch,
   classNames,
   isHover,
@@ -26,11 +26,11 @@ const ConferenceCard = ({
             <span className="block text-primary mt-[0.19rem]">
               <IconStore iconName="Marker" />
             </span>
-            <span className="line-clamp-2">{title}</span>
+            <span className="line-clamp-2">{name}</span>
           </div>
           <div className="block ml-[2.06rem]">
             <span className="text-sm font-normal text-gray line-clamp-2">
-              {subTitle}
+              {slogan}
             </span>
           </div>
         </div>
