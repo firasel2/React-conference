@@ -16,7 +16,7 @@ const Navbar = ({ logo, routes }: INavbar) => {
             className="w-full h-auto"
             width={117}
             height={32}
-            src={logo.src}
+            src={logo.url}
             alt={logo.alt}
           />
         </div>

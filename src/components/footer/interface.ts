@@ -1,4 +1,5 @@
 import { IconNames } from '@components/icons/interface';
+import { IImage } from '@src/common/types/interface';
 
 interface ISocialLink {
   icon: IconNames;
@@ -6,10 +7,7 @@ interface ISocialLink {
 }
 
 export interface IFooter {
-  logo: {
-    url: string;
-    alt: string;
-  };
+  logo: IImage;
   socialLinks: ISocialLink[];
   copyRightText: string;
 }
