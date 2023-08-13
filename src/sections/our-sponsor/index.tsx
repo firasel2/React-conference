@@ -1,13 +1,7 @@
-import Image from 'next/image';
 import { IOurSponsor } from './interface';
-import { twMerge } from 'tailwind-merge';
-import ConferenceCard from '@components/card/conference';
-import TimeLineStep from '@components/time-line-step';
-import { useState } from 'react';
 import SponsorList from '@components/sponsor-list';
 
 const OurSponsor = ({ title, allSponsors }: IOurSponsor) => {
-  const [confHoverId, setConfHoverId] = useState<string | undefined>();
   return (
     <section className="w-full">
       <div className="container">

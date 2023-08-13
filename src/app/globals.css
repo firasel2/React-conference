@@ -3,5 +3,5 @@
 @tailwind utilities;
 
 .section-padding-primary {
-  @apply py-[6.25rem];
+  @apply py-[2.25rem] md:py-[4.25rem] lg:py-[5.25rem] xl:py-[6.25rem];
 }

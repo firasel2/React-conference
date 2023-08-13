@@ -5,13 +5,8 @@ const CONFERENCES_QUERY = gql`
     conferences {
       id
       name
-      organizer {
-        name
-      }
-      year
-      locations {
-        name
-      }
+      startDate
+      slogan
     }
   }
 `;
