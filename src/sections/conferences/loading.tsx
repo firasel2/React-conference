@@ -19,7 +19,7 @@ const ConferenceSkeleton = () => {
                 i % 2 == 0 ? 'md:order-0' : 'md:order-2'
               )}
             >
-              <Skeleton className="block mb-[0.87rem] md:hidden w-full h-3" />
+              <Skeleton className="block mb-[0.87rem] md:hidden w-full h-3 -mt-7" />
               <ConferenceCardSkeleton />
             </div>
             <div className="order-0 md:order-1">
@@ -32,11 +32,11 @@ const ConferenceSkeleton = () => {
             </div>
             <div
               className={twMerge(
-                'w-full flex',
+                'w-full hidden md:flex',
                 i % 2 == 0 ? 'order-2' : 'order-0 justify-end'
               )}
             >
-              <Skeleton className="hidden md:block mb-[0.87rem] w-1/2 h-3 mt-4" />
+              <Skeleton className="mb-[0.87rem] w-1/2 h-3 mt-4" />
             </div>
           </div>
         ))}

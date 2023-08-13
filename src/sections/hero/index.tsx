@@ -36,7 +36,7 @@ const Hero = ({ title, description, leftImage, rightImage }: IHero) => {
         />
       </div>
 
-      <div className="container pt-[13rem] py-[8.5rem]">
+      <div className="container pt-[9rem] py-[3rem] md:pt-[10rem] md:py-[7rem] xl:pt-[13rem] xl:py-[8.5rem]">
         <div className="flex gap-1 relative">
           <div className="flex flex-col lg:flex-row gap-[2rem] md:gap-[2.79rem]">
             <div className="flex flex-col gap-[2.19rem] items-start sm:items-center lg:items-end">
