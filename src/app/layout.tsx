@@ -3,7 +3,6 @@ import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
 import { ApolloWrapper } from './ApolloWrapper';
 import Navbar from '@components/navbar';
-import Hero from '@src/sections/hero';
 import { navbarProps } from '@components/navbar/mock-data';
 import Footer from '@components/footer';
 import { footerProps } from '@components/footer/mock-data';
