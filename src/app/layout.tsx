@@ -6,6 +6,7 @@ import Navbar from '@components/navbar';
 import { navbarProps } from '@components/navbar/mock-data';
 import Footer from '@components/footer';
 import { footerProps } from '@components/footer/mock-data';
+import { ErrorBoundary } from 'react-error-boundary';
 
 const inter = Inter({ subsets: ['latin'] });
 
@@ -24,10 +25,10 @@ export default function RootLayout({
     <html lang="en">
       <body className={inter.className}>
         <ApolloWrapper>
-          <div className="absolute top-0 left-0 w-full z-50">
+          <header className="absolute top-0 left-0 w-full z-50">
             <Navbar {...navbarProps} />
-          </div>
-          {children}
+          </header>
+          <main>{children}</main>
           <Footer {...footerProps} />
         </ApolloWrapper>
       </body>
