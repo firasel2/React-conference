@@ -1,4 +1,4 @@
-import React from 'react';
+'use client';
 
 const SectionError = ({ error }: { error: Error }) => {
   return (

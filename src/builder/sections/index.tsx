@@ -10,31 +10,19 @@ const SectionBuilder = ({ sectionType }: { sectionType: sectionType }) => {
   switch (sectionType) {
     case 'conferences':
       return (
-        <ErrorBoundary
-          FallbackComponent={(props) => {
-            return <SectionError {...props} />;
-          }}
-        >
+        <ErrorBoundary FallbackComponent={SectionError}>
           <ConferencesSectionBuilder />
         </ErrorBoundary>
       );
     case 'hero':
       return (
-        <ErrorBoundary
-          FallbackComponent={(props) => {
-            return <SectionError {...props} />;
-          }}
-        >
+        <ErrorBoundary FallbackComponent={SectionError}>
           <HeroSectionBuilder />
         </ErrorBoundary>
       );
     case 'our-sponsors':
       return (
-        <ErrorBoundary
-          FallbackComponent={(props) => {
-            return <SectionError {...props} />;
-          }}
-        >
+        <ErrorBoundary FallbackComponent={SectionError}>
           <OurSponsorSectionBuilder />
         </ErrorBoundary>
       );
