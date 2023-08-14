@@ -12,7 +12,7 @@ const Hero = ({ title, description, leftImage, rightImage }: IHero) => {
   const splitedStrings = splitString(title);
 
   return (
-    <section className="w-full min-h-screen flex items-center justify-center relative overflow-hidden">
+    <section className="w-full min-h-screen flex items-center justify-center relative">
       <div className="w-[24rem] h-[24rem] aspect-square opacity-90 rounded-full bg-[#7C3EFF] blur-[15.6rem] absolute top-0 left-0" />
       <div className="w-[24rem] h-[24rem] aspect-square absolute top-0 left-0">
         <Image
