@@ -3,15 +3,41 @@ import { sectionType } from './interface';
 import ConferencesSectionBuilder from './conferences';
 import HeroSectionBuilder from './hero';
 import OurSponsorSectionBuilder from './our-sponsor';
+import { ErrorBoundary } from 'react-error-boundary';
+import SectionError from '@src/sections/section-error';
 
 const SectionBuilder = ({ sectionType }: { sectionType: sectionType }) => {
   switch (sectionType) {
     case 'conferences':
-      return <ConferencesSectionBuilder />;
+      return (
+        <ErrorBoundary
+          FallbackComponent={(props) => {
+            return <SectionError {...props} />;
+          }}
+        >
+          <ConferencesSectionBuilder />
+        </ErrorBoundary>
+      );
     case 'hero':
-      return <HeroSectionBuilder />;
+      return (
+        <ErrorBoundary
+          FallbackComponent={(props) => {
+            return <SectionError {...props} />;
+          }}
+        >
+          <HeroSectionBuilder />
+        </ErrorBoundary>
+      );
     case 'our-sponsors':
-      return <OurSponsorSectionBuilder />;
+      return (
+        <ErrorBoundary
+          FallbackComponent={(props) => {
+            return <SectionError {...props} />;
+          }}
+        >
+          <OurSponsorSectionBuilder />
+        </ErrorBoundary>
+      );
     default:
       return null;
   }
