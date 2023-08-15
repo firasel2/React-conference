@@ -1,4 +1,3 @@
-import React from 'react';
 import { IOrganizer } from './interface';
 import Info from '@components/card/info';
 import Image from 'next/image';
@@ -10,7 +9,9 @@ const Organizer = ({ organizers, isLoading }: IOrganizer) => {
       {/* Organizer data render */}
       {organizers &&
         organizers.length > 0 &&
-        organizers.map((organizer, i) => <Info key={i} {...organizer} />)}
+        organizers.map((organizer, i) => (
+          <Info key={i} {...organizer} type="Organizers" />
+        ))}
       {/* No data */}
       {!organizers ||
         (organizers.length == 0 && !isLoading && (
