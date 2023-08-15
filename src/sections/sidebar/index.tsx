@@ -5,9 +5,10 @@ import { ISidebar } from './interface';
 const Sidebar = ({ sidebarItems }: ISidebar) => {
   return (
     <section className="flex flex-col gap-8">
-      {sidebarItems.map((sidebarItem, i) => (
-        <SidebarItem key={i} {...sidebarItem} />
-      ))}
+      {sidebarItems.length > 0 &&
+        sidebarItems.map((sidebarItem, i) => (
+          <SidebarItem key={i} {...sidebarItem} />
+        ))}
     </section>
   );
 };
