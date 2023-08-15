@@ -14,16 +14,23 @@ const Info = (props: IInfo) => {
         type === 'Schedules' ? 'py-4 md:py-6 px-7 md:px-10' : 'p-3 md:p-4'
       )}
     >
-      {type !== 'Schedules' && props.imgUrl && (
+      {type !== 'Schedules' && props.image?.url && (
         <div className="w-[5.5rem] md:w-[8.75rem] aspect-square rounded-lg bg-primary-thin overflow-hidden">
-          <Image width={140} height={140} src={props.imgUrl} alt={title} />
+          <Image
+            width={140}
+            height={140}
+            src={props.image.url}
+            alt={props.image?.alt}
+          />
         </div>
       )}
       <div className="w-full flex flex-col justify-start gap-2 md:gap-[1.25rem]">
         <div className="flex flex-wrap items-center justify-between gap-2">
-          <span className="block text-black text-base md:text-xl font-bold w-fit">
-            {title}
-          </span>
+          {title && (
+            <span className="block text-black text-base md:text-xl font-bold w-fit">
+              {title}
+            </span>
+          )}
           {/* Speaker card socila links */}
           {type === 'Speakers' &&
             props.socialLinks &&
@@ -68,21 +75,21 @@ const Info = (props: IInfo) => {
               </div>
             )}
           {/* Schedule card date */}
-          {type === 'Schedules' && (
+          {type === 'Schedules' && subTitle && (
             <span className="block text-black text-xs md:text-base font-normal">
               {subTitle}
             </span>
           )}
         </div>
         {/* Card sub-title */}
-        {type !== 'Schedules' && (
+        {type !== 'Schedules' && subTitle && (
           <span className="block text-black text-xs md:text-base font-normal">
             {subTitle}
           </span>
         )}
         {/* Schedule list */}
         {type === 'Schedules' &&
-          props.sessions.map((session, i) => (
+          props?.sessions?.map((session, i) => (
             <div
               className="text-black text-xs md:text-base font-normal opacity-80 flex flex-col "
               key={i}

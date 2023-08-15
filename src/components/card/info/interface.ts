@@ -1,17 +1,20 @@
+import { IImage } from '@src/common/types/interface';
+import { type } from 'os';
+
 interface Info {
   title: string;
 }
 
-interface IOrganizers extends Info {
+export interface IOrganizers extends Info {
   type: 'Organizers';
   subTitle: string;
-  imgUrl?: string;
+  image?: IImage;
 }
 
-interface ISpeakers extends Info {
+export interface ISpeakers extends Info {
   type: 'Speakers';
   subTitle: string;
-  imgUrl?: string;
+  image?: IImage;
   socialLinks: {
     twitter?: string;
     linkedin?: string;
@@ -20,7 +23,7 @@ interface ISpeakers extends Info {
   };
 }
 
-interface ISchedules extends Info {
+export interface ISchedules extends Info {
   type: 'Schedules';
   subTitle: string;
   sessions: {
@@ -30,8 +33,16 @@ interface ISchedules extends Info {
   }[];
 }
 
-interface ISponsors extends Omit<IOrganizers, 'type'> {
+export interface ISponsors extends Omit<IOrganizers, 'type'> {
   type: 'Sponsors';
+}
+
+export interface IInfoSkeleton {
+  type:
+    | IOrganizers['type']
+    | ISpeakers['type']
+    | ISchedules['type']
+    | ISponsors['type'];
 }
 
 export type IInfo = IOrganizers | ISpeakers | ISchedules | ISponsors;
