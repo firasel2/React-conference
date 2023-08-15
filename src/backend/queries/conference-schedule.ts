@@ -1,6 +1,6 @@
 import { gql } from '@apollo/client';
 
-const CONFERENCES_SCHEDULE_QUERY = gql`
+const CONFERENCE_SCHEDULE_QUERY = gql`
   query Conference($id: ID!) {
     conference(id: $id) {
       schedules {
@@ -17,4 +17,4 @@ const CONFERENCES_SCHEDULE_QUERY = gql`
   }
 `;
 
-export { CONFERENCES_SCHEDULE_QUERY };
+export { CONFERENCE_SCHEDULE_QUERY };

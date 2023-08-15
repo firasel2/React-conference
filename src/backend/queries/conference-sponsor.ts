@@ -1,24 +1,18 @@
 import { gql } from '@apollo/client';
 
-const CONFERENCE_SPEAKER_QUERY = gql`
+const CONFERENCE_SPONSOR_QUERY = gql`
   query Conference($id: ID!) {
     conference(id: $id) {
-      speakers {
+      sponsors {
         title: name
         subTitle: aboutShort
         image {
           url
           alt: title
         }
-        socialLinks: social {
-          twitter
-          github
-          linkedin
-          dribble
-        }
       }
     }
   }
 `;
 
-export { CONFERENCE_SPEAKER_QUERY };
+export { CONFERENCE_SPONSOR_QUERY };

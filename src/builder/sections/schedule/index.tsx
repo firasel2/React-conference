@@ -2,7 +2,7 @@
 
 import { useQuery } from '@apollo/experimental-nextjs-app-support/ssr';
 import { ISchedules } from '@components/card/info/interface';
-import { CONFERENCES_SCHEDULE_QUERY } from '@src/backend/queries/conference-schedule';
+import { CONFERENCE_SCHEDULE_QUERY } from '@src/backend/queries/conference-schedule';
 import Schedule from '@src/sections/schedule';
 import { useParams } from 'next/navigation';
 import { IConferenceScheduleData } from './interface';
@@ -22,7 +22,7 @@ function formatDate(dateStr: string): { title: string; subTitle: string } {
 const ScheduleSectionBuilder = () => {
   const { id } = useParams();
   let { loading, data } = useQuery<IConferenceScheduleData>(
-    CONFERENCES_SCHEDULE_QUERY,
+    CONFERENCE_SCHEDULE_QUERY,
     {
       variables: {
         id: id,
