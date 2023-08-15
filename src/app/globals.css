@@ -1,3 +1,25 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.section-padding-primary {
+  @apply py-[2.25rem] md:py-[4.25rem] lg:py-[5.25rem] xl:py-[6.25rem];
+}
+
+.custom-scrollbar::-webkit-scrollbar {
+  width: 10px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+  @apply bg-gray-thin rounded-lg;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  border-radius: 5px;
+  @apply bg-gray-light;
+}
+
+.custom-scrollbar {
+  scrollbar-width: thin;
+  scrollbar-color: #888 #f1f1f1;
+}
