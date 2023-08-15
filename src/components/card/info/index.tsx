@@ -89,7 +89,7 @@ const Info = (props: IInfo) => {
         )}
         {/* Schedule list */}
         {type === 'Schedules' &&
-          props.sessions.map((session, i) => (
+          props?.sessions?.map((session, i) => (
             <div
               className="text-black text-xs md:text-base font-normal opacity-80 flex flex-col "
               key={i}
