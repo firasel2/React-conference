@@ -1,12 +1,12 @@
-import React from 'react';
 import { sectionType } from './interface';
+import { ErrorBoundary } from 'react-error-boundary';
 import ConferencesSectionBuilder from './conferences';
 import HeroSectionBuilder from './hero';
 import OurSponsorSectionBuilder from './our-sponsor';
-import { ErrorBoundary } from 'react-error-boundary';
 import SectionError from '@src/sections/section-error';
 import SidebarSectionBuilder from './sidebar';
 import OrganizerSectionBuilder from './organizer';
+import SpeakerSectionBuilder from './speaker';
 
 const SectionBuilder = ({ sectionType }: { sectionType: sectionType }) => {
   switch (sectionType) {
@@ -38,6 +38,12 @@ const SectionBuilder = ({ sectionType }: { sectionType: sectionType }) => {
       return (
         <ErrorBoundary FallbackComponent={SectionError}>
           <OrganizerSectionBuilder />
+        </ErrorBoundary>
+      );
+    case 'speaker':
+      return (
+        <ErrorBoundary FallbackComponent={SectionError}>
+          <SpeakerSectionBuilder />
         </ErrorBoundary>
       );
     default:
