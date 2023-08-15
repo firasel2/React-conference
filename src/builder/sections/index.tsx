@@ -9,8 +9,15 @@ import OrganizerSectionBuilder from './organizer';
 import SpeakerSectionBuilder from './speaker';
 import ScheduleSectionBuilder from './schedule';
 import SponsorSectionBuilder from './sponsor';
+import { ReactNode } from 'react';
 
-const SectionBuilder = ({ sectionType }: { sectionType: sectionType }) => {
+const SectionBuilder = ({
+  sectionType,
+  children,
+}: {
+  sectionType: sectionType;
+  children?: ReactNode;
+}) => {
   switch (sectionType) {
     case 'conferences':
       return (
@@ -33,7 +40,7 @@ const SectionBuilder = ({ sectionType }: { sectionType: sectionType }) => {
     case 'sidebar':
       return (
         <ErrorBoundary FallbackComponent={SectionError}>
-          <SidebarSectionBuilder />
+          <SidebarSectionBuilder>{children}</SidebarSectionBuilder>
         </ErrorBoundary>
       );
     case 'organizer':

@@ -15,12 +15,12 @@ const Info = (props: IInfo) => {
       )}
     >
       {type !== 'Schedules' && props.image?.url && (
-        <div className="w-[5.5rem] md:w-[8.75rem] aspect-square rounded-lg bg-primary-thin overflow-hidden">
+        <div className="w-[5.5rem] md:w-[8.75rem] aspect-square rounded-lg bg-primary-thin overflow-hidden flex items-center justify-center">
           <Image
             width={140}
             height={140}
             src={props.image.url}
-            alt={props.image?.alt}
+            alt={props.image?.alt || ''}
           />
         </div>
       )}

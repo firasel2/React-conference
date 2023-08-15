@@ -39,7 +39,7 @@ const Conferences = ({ title, conferences, isLoading }: IConferences) => {
                     >
                       <ConferenceCard
                         id={conference.id}
-                        href={conference.id}
+                        href={`/${conference.id}/organizer`}
                         name={conference.name}
                         slogan={conference.slogan}
                         isOpenNewTab={false}
