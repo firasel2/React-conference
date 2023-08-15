@@ -26,9 +26,11 @@ const Info = (props: IInfo) => {
       )}
       <div className="w-full flex flex-col justify-start gap-2 md:gap-[1.25rem]">
         <div className="flex flex-wrap items-center justify-between gap-2">
-          <span className="block text-black text-base md:text-xl font-bold w-fit">
-            {title}
-          </span>
+          {title && (
+            <span className="block text-black text-base md:text-xl font-bold w-fit">
+              {title}
+            </span>
+          )}
           {/* Speaker card socila links */}
           {type === 'Speakers' &&
             props.socialLinks &&
@@ -73,14 +75,14 @@ const Info = (props: IInfo) => {
               </div>
             )}
           {/* Schedule card date */}
-          {type === 'Schedules' && (
+          {type === 'Schedules' && subTitle && (
             <span className="block text-black text-xs md:text-base font-normal">
               {subTitle}
             </span>
           )}
         </div>
         {/* Card sub-title */}
-        {type !== 'Schedules' && (
+        {type !== 'Schedules' && subTitle && (
           <span className="block text-black text-xs md:text-base font-normal">
             {subTitle}
           </span>

@@ -4,6 +4,7 @@ export const sectionTypes = [
   'our-sponsors',
   'sidebar',
   'organizer',
+  'speaker',
 ] as const;
 
 export type sectionType = (typeof sectionTypes)[number];

@@ -1,20 +1,20 @@
-import { IOrganizer } from './interface';
+import { ISpeaker } from './interface';
 import Info from '@components/card/info';
 import Image from 'next/image';
 import InfoSkeleton from '@components/card/info/skeleton';
 
-const Organizer = ({ organizers, isLoading }: IOrganizer) => {
+const Speaker = ({ speakers, isLoading }: ISpeaker) => {
   return (
     <>
-      {/* Organizer data render */}
-      {organizers &&
-        organizers.length > 0 &&
-        organizers.map((organizer, i) => (
-          <Info key={i} {...organizer} type="Organizers" />
+      {/* Speakers data render */}
+      {speakers &&
+        speakers.length > 0 &&
+        speakers.map((speaker, i) => (
+          <Info key={i} {...speaker} type="Speakers" />
         ))}
       {/* No data */}
-      {!organizers ||
-        (organizers.length == 0 && !isLoading && (
+      {!speakers ||
+        (speakers.length == 0 && !isLoading && (
           <Image
             className="mx-auto"
             width={300}
@@ -27,9 +27,9 @@ const Organizer = ({ organizers, isLoading }: IOrganizer) => {
       {isLoading &&
         Array(3)
           .fill('_')
-          .map((_, i) => <InfoSkeleton key={i} type="Organizers" />)}
+          .map((_, i) => <InfoSkeleton key={i} type="Speakers" />)}
     </>
   );
 };
 
-export default Organizer;
+export default Speaker;
