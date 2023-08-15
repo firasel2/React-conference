@@ -19,7 +19,7 @@ const Conferences = ({ title, conferences, isLoading }: IConferences) => {
             {title}
           </h2>
           {isLoading && <ConferenceSkeleton />}
-          {!isLoading && conferences && conferences.length > 0 ? (
+          {!isLoading && conferences && conferences.length > 0 && (
             <div className="flex flex-col gap-2 min-w-full xl:min-w-[80%]">
               {conferences.map((conference, i) => (
                 <div className="flex items-start gap-5 md:gap-10" key={i}>
@@ -68,7 +68,8 @@ const Conferences = ({ title, conferences, isLoading }: IConferences) => {
                 </div>
               ))}
             </div>
-          ) : (
+          )}
+          {!isLoading && !conferences && (
             <Image
               width={400}
               height={400}
