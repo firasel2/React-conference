@@ -4,16 +4,20 @@ export const organizersProps: IInfo = {
   type: 'Organizers',
   title: 'Siddhartha',
   subTitle: 'Lorem ipsum dolor sit amet, con sec tetur ad.',
-  imgUrl:
-    'https://res.cloudinary.com/dezqxmlny/image/upload/v1691243555/React%20Conference/Rectangle_215_wpfvdo.png',
+  image: {
+    url: 'https://res.cloudinary.com/dezqxmlny/image/upload/v1691243555/React%20Conference/Rectangle_215_wpfvdo.png',
+    alt: 'organizers',
+  },
 };
 
 export const speakersProps: IInfo = {
   type: 'Speakers',
   title: 'Ronald Richards',
   subTitle: 'Lorem ipsum dolor sit amet, con sec tetur ad.',
-  imgUrl:
-    'https://res.cloudinary.com/dezqxmlny/image/upload/v1691243555/React%20Conference/Rectangle_215_wpfvdo.png',
+  image: {
+    url: 'https://res.cloudinary.com/dezqxmlny/image/upload/v1691243555/React%20Conference/Rectangle_215_wpfvdo.png',
+    alt: 'speaker',
+  },
   socialLinks: {
     twitter: 'https://twitter.com',
     linkedin: 'https://linkedin.com',
@@ -26,8 +30,10 @@ export const sponsorsProps: IInfo = {
   type: 'Sponsors',
   title: 'Louis Vuitton',
   subTitle: 'Lorem ipsum dolor sit amet, con sec tetur ad.',
-  imgUrl:
-    'https://res.cloudinary.com/dezqxmlny/image/upload/v1691243555/React%20Conference/Rectangle_215_wpfvdo.png',
+  image: {
+    url: 'https://res.cloudinary.com/dezqxmlny/image/upload/v1691243555/React%20Conference/Rectangle_215_wpfvdo.png',
+    alt: 'sponsors',
+  },
 };
 
 export const schedulesProps: IInfo = {

@@ -14,9 +14,14 @@ const Info = (props: IInfo) => {
         type === 'Schedules' ? 'py-4 md:py-6 px-7 md:px-10' : 'p-3 md:p-4'
       )}
     >
-      {type !== 'Schedules' && props.imgUrl && (
+      {type !== 'Schedules' && props.image?.url && (
         <div className="w-[5.5rem] md:w-[8.75rem] aspect-square rounded-lg bg-primary-thin overflow-hidden">
-          <Image width={140} height={140} src={props.imgUrl} alt={title} />
+          <Image
+            width={140}
+            height={140}
+            src={props.image.url}
+            alt={props.image?.alt}
+          />
         </div>
       )}
       <div className="w-full flex flex-col justify-start gap-2 md:gap-[1.25rem]">
