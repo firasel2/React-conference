@@ -3,7 +3,7 @@
 import { useQuery } from '@apollo/experimental-nextjs-app-support/ssr';
 import { ISpeakers } from '@components/card/info/interface';
 import { CONFERENCES_SPEAKER_QUERY } from '@src/backend/queries/conference-speaker';
-import Speaker from '@src/sections/speakers';
+import Speaker from '@src/sections/speaker';
 
 import { useParams } from 'next/navigation';
 
