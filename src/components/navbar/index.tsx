@@ -12,13 +12,16 @@ const Navbar = ({ logo, routes }: INavbar) => {
     <nav className="container">
       <div className="flex items-center justify-between gap-16 pt-8 pb-1 md:py-10 relative">
         <div className="w-16 md:w-24 xl:w-32 h-auto">
-          <Image
-            className="w-full h-auto"
-            width={117}
-            height={32}
-            src={logo.url}
-            alt={logo.alt}
-          />
+          <Link href="/">
+            <Image
+              className="w-full h-auto"
+              width={117}
+              height={32}
+              src={logo.url}
+              alt={logo.alt}
+              priority
+            />
+          </Link>
         </div>
         <div
           data-state={isShow}

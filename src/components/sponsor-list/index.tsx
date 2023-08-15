@@ -19,7 +19,7 @@ const SponsorList = ({ title, sponsors }: ISponsorList) => {
               <Image
                 width={256}
                 height={68}
-                sizes="(max-width: 767px) 70vw, 30vw"
+                className="w-auto h-auto"
                 src={sponsor.url}
                 alt={sponsor.alt}
               />

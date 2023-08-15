@@ -12,7 +12,6 @@ import {
 function makeClient() {
   const httpLink = new HttpLink({
     uri: 'https://api.react-finland.fi/graphql',
-    fetchOptions: { cache: 'no-store' },
   });
 
   return new NextSSRApolloClient({

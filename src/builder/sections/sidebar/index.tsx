@@ -1,35 +1,42 @@
 import Sidebar from '@src/sections/sidebar';
+import { useParams, usePathname } from 'next/navigation';
+import { ReactNode } from 'react';
 
-const SidebarSectionBuilder = () => {
+const SidebarSectionBuilder = ({ children }: { children?: ReactNode }) => {
+  const { id } = useParams();
+  const pathName = usePathname();
+
   return (
     <Sidebar
       sidebarItems={[
         {
-          href: '/organizer',
+          href: `/${id}/organizer`,
           title: 'Organizer',
-          active: true,
+          active: pathName.includes('/organizer'),
           icon: 'Top Bottom Arrow',
         },
         {
-          href: '/speakers',
+          href: `/${id}/speakers`,
           title: 'Speakers',
-          active: false,
+          active: pathName.includes('/speakers'),
           icon: 'Top Bottom Arrow',
         },
         {
-          href: '/schedule',
+          href: `/${id}/schedule`,
           title: 'Schedule',
-          active: false,
+          active: pathName.includes('/schedule'),
           icon: 'Top Bottom Arrow',
         },
         {
-          href: '/sponsors',
+          href: `/${id}/sponsors`,
           title: 'Sponsors',
-          active: false,
+          active: pathName.includes('/sponsors'),
           icon: 'Top Bottom Arrow',
         },
       ]}
-    />
+    >
+      {children}
+    </Sidebar>
   );
 };
 

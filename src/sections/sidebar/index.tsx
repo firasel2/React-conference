@@ -1,13 +1,19 @@
 import SidebarItem from '@components/sidebar-item';
-import React from 'react';
+import { Fragment } from 'react';
 import { ISidebar } from './interface';
+import { usePathname } from 'next/navigation';
 
-const Sidebar = ({ sidebarItems }: ISidebar) => {
+const Sidebar = ({ sidebarItems, children }: ISidebar) => {
+  const pathName = usePathname();
+
   return (
-    <section className="flex flex-col gap-8">
+    <section className="flex flex-col gap-5 md:gap-8 w-full lg:w-auto">
       {sidebarItems.length > 0 &&
         sidebarItems.map((sidebarItem, i) => (
-          <SidebarItem key={i} {...sidebarItem} />
+          <Fragment key={i}>
+            <SidebarItem {...sidebarItem} />
+            {children && sidebarItem.active && children}
+          </Fragment>
         ))}
     </section>
   );

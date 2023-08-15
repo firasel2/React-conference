@@ -28,8 +28,7 @@ const Hero = ({ title, description, leftImage, rightImage }: IHero) => {
       <div className="w-[16rem] h-[16rem] aspect-square opacity-90 rounded-full bg-[#22B5BE] blur-[15.6rem] absolute bottom-0 left-32" />
       <div className="w-[59rem] h-[52rem] absolute bottom-0 xl:bottom-auto xl:top-[12rem] left-0 xl:left-auto xl:right-[10rem]">
         <Image
-          width={940}
-          height={832}
+          fill={true}
           className="w-full h-full"
           src="https://res.cloudinary.com/dezqxmlny/image/upload/v1691756517/React%20Conference/Vector_1_yfnxde.png"
           alt="line shape"
