@@ -10,7 +10,7 @@ const CONFERENCES_SPEAKER_QUERY = gql`
           url
           alt: title
         }
-        social {
+        socialLinks: social {
           twitter
           github
           linkedin
