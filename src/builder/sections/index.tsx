@@ -7,6 +7,7 @@ import SectionError from '@src/sections/section-error';
 import SidebarSectionBuilder from './sidebar';
 import OrganizerSectionBuilder from './organizer';
 import SpeakerSectionBuilder from './speaker';
+import ScheduleSectionBuilder from './schedule';
 
 const SectionBuilder = ({ sectionType }: { sectionType: sectionType }) => {
   switch (sectionType) {
@@ -44,6 +45,12 @@ const SectionBuilder = ({ sectionType }: { sectionType: sectionType }) => {
       return (
         <ErrorBoundary FallbackComponent={SectionError}>
           <SpeakerSectionBuilder />
+        </ErrorBoundary>
+      );
+    case 'schedule':
+      return (
+        <ErrorBoundary FallbackComponent={SectionError}>
+          <ScheduleSectionBuilder />
         </ErrorBoundary>
       );
     default:
