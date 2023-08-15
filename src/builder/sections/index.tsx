@@ -6,6 +6,7 @@ import OurSponsorSectionBuilder from './our-sponsor';
 import { ErrorBoundary } from 'react-error-boundary';
 import SectionError from '@src/sections/section-error';
 import SidebarSectionBuilder from './sidebar';
+import OrganizerSectionBuilder from './organizer';
 
 const SectionBuilder = ({ sectionType }: { sectionType: sectionType }) => {
   switch (sectionType) {
@@ -31,6 +32,12 @@ const SectionBuilder = ({ sectionType }: { sectionType: sectionType }) => {
       return (
         <ErrorBoundary FallbackComponent={SectionError}>
           <SidebarSectionBuilder />
+        </ErrorBoundary>
+      );
+    case 'organizer':
+      return (
+        <ErrorBoundary FallbackComponent={SectionError}>
+          <OrganizerSectionBuilder />
         </ErrorBoundary>
       );
     default:
