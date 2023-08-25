@@ -63,7 +63,7 @@ Connect with Md Rasel:
 
 - Website: [firasel.com](https://firasel.com) or [terminal.firasel.com](https://terminal.firasel.com)
 - GitHub: [@firasel](https://github.com/firasel) and [@firasel2](https://github.com/firasel2)
-- LinkedIn: [linkedin.firasel.com](https://linkedin.firasel.com)
+- LinkedIn: [linkedin.firasel.com](http://linkedin.firasel.com)
 - Support Md Rasel on Buy Me a Coffee: [firasel](https://buymeacoffee.com/firasel)
 
 <hr/>
