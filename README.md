@@ -1,32 +1,72 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+<br/>
+<h1 align="center">React Conference</h1>
 
-## Getting Started
+Welcome to the React Conference website repository!
 
-First, run the development server:
+## Technologies Used
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-```
+- [React and React DOM](https://react.dev)
+- [Next.js](https://nextjs.org)
+- [Tailwind CSS](https://tailwindcss.com)
+- [Apollo Client](https://www.apollographql.com/docs/react)
+- [DND Kit](https://dndkit.com)
+- [Storybook](https://storybook.js.org)
+- [TypeScript](https://www.typescriptlang.org)
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## How to Get Started
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+Follow these steps to get the React Conference website up and running locally:
 
-## Learn More
+1. Clone the repository:
 
-To learn more about Next.js, take a look at the following resources:
+   ```bash
+   git clone https://github.com/firasel2/React-conference.git
+   ```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+2. Navigate to the project directory:
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+   ```bash
+   cd React-conference
+   ```
 
-## Deploy on Vercel
+3. Install dependencies:
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+   ```bash
+   npm install
+   ```
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+4. Start the development server:
+
+   ```bash
+   npm run dev
+   ```
+
+Open your browser and go to http://localhost:3000 to see the website in action.
+
+## Inspiration and Credits
+
+The project's structure and practices are inspired by senior developers at my workplace, [Lemon Hive](https://www.lemonhive.com). Their expertise shaped this approach.
+
+## Contribution
+
+Contributions to the React Conference website are always welcome! If you find any issues or have ideas for improvements, feel free to submit a pull request or open an issue on GitHub.
+
+## License
+
+[MIT License](LICENSE)
+
+## About the Creator
+
+This website is developed by Md Rasel.
+
+Connect with Md Rasel:
+
+- Website: [firasel.com](https://firasel.com) or [terminal.firasel.com](https://terminal.firasel.com)
+- GitHub: [@firasel](https://github.com/firasel) and [@firasel2](https://github.com/firasel2)
+- LinkedIn: [linkedin.firasel.com](https://linkedin.firasel.com)
+- Support Md Rasel on Buy Me a Coffee: [firasel](https://buymeacoffee.com/firasel)
+
+<hr/>
+If you find this project interesting or useful, please consider giving it a ⭐ to show your appreciation.
+
+<b>Thank You</b>
