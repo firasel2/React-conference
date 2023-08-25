@@ -23,10 +23,10 @@ const Hero = ({ title, description, leftImage, rightImage }: IHero) => {
           alt="circle shape line"
         />
       </div>
-      <div className="w-[26rem] h-[26rem] aspect-square opacity-90 rounded-full bg-[#BE229C] blur-[15.6rem] absolute top-0 right-0" />
-      <div className="w-[16rem] h-[16rem] aspect-square opacity-90 rounded-full bg-[#FFC93E] blur-[15.6rem] absolute bottom-0 right-32" />
-      <div className="w-[16rem] h-[16rem] aspect-square opacity-90 rounded-full bg-[#22B5BE] blur-[15.6rem] absolute bottom-0 left-32" />
-      <div className="w-[59rem] h-[52rem] absolute bottom-0 xl:bottom-auto xl:top-[12rem] left-0 xl:left-auto xl:right-[10rem]">
+      <div className="w-[8rem] h-[8rem] md:w-[26rem] md:h-[26rem] aspect-square opacity-90 rounded-full bg-[#BE229C] blur-[15.6rem] absolute top-0 right-0" />
+      <div className="w-[10rem] h-[10rem] md:w-[16rem] md:h-[16rem] aspect-square opacity-90 rounded-full bg-[#FFC93E] blur-[15.6rem] absolute bottom-0 right-8 md:right-32" />
+      <div className="w-[10rem] h-[10rem] md:w-[16rem] md:h-[16rem] aspect-square opacity-90 rounded-full bg-[#22B5BE] blur-[4.5rem] md:blur-[15.6rem] absolute bottom-0 left-8 md:left-32" />
+      <div className="w-[21rem] h-[27rem] md:w-[59rem] md:h-[52rem] absolute top-[8rem] md:bottom-0 xl:bottom-auto xl:top-[12rem] -right-[8rem] md:right-auto md:left-0 xl:left-auto xl:right-[10rem]">
         <Image
           fill={true}
           className="w-full h-full"

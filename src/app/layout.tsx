@@ -6,7 +6,7 @@ import Navbar from '@components/navbar';
 import { navbarProps } from '@components/navbar/mock-data';
 import Footer from '@components/footer';
 import { footerProps } from '@components/footer/mock-data';
-import { ErrorBoundary } from 'react-error-boundary';
+import BuyMeACoffee from '@components/buyMeACoffee';
 
 const inter = Inter({ subsets: ['latin'] });
 
@@ -28,9 +28,10 @@ export default function RootLayout({
           <header className="absolute top-0 left-0 w-full z-50">
             <Navbar {...navbarProps} />
           </header>
-          <main>{children}</main>
+          <main className="overflow-hidden">{children}</main>
           <Footer {...footerProps} />
         </ApolloWrapper>
+        <BuyMeACoffee />
       </body>
     </html>
   );
