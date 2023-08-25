@@ -4,6 +4,7 @@ export interface ISidebarItem {
   id: string;
   title: string;
   href: string;
+  activeKey?: string;
   active?: boolean;
   icon?: IconNames;
 }
