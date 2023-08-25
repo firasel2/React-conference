@@ -28,7 +28,7 @@ export default function RootLayout({
           <header className="absolute top-0 left-0 w-full z-50">
             <Navbar {...navbarProps} />
           </header>
-          <main>{children}</main>
+          <main className="overflow-hidden">{children}</main>
           <Footer {...footerProps} />
         </ApolloWrapper>
       </body>
