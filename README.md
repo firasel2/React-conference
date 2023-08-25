@@ -1,7 +1,9 @@
 <br/>
-<h1 align="center">React Conference</h1>
+<h1 align="center"><a href="https://reactconference.vercel.app/" target="_blank" style="color:white; text-decoration:none;">React Conference</a></h1>
 
 Welcome to the React Conference website repository!
+
+#### Live link: [React Conference](https://reactconference.vercel.app/)
 
 ## Technologies Used
 
