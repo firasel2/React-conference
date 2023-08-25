@@ -31,4 +31,5 @@ export const sidebarProps: ISidebar = {
       icon: 'Top Bottom Arrow',
     },
   ],
+  setSidebarItems: () => {},
 };
